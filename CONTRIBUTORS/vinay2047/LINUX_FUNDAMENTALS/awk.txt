@@ -1,0 +1,61 @@
+COMMAND: awk
+
+DESCRIPTION:
+awk is a powerful text-processing command used to scan files or input line by line,
+split each line into fields, and perform actions based on patterns.
+In CTFs and cybersecurity tasks, awk is commonly used for parsing logs,
+extracting specific fields, filtering outputs, and automating data analysis.
+
+USAGE:
+awk 'pattern { action }' file
+
+COMMON AND USEFUL FLAGS / FEATURES:
+
+1. {print}
+Prints entire lines or specific fields.
+Example:
+awk '{print}' file.txt
+
+2. $1, $2, $NF
+Access specific fields in a line.
+$1 = first field, $2 = second field, $NF = last field.
+Example:
+awk '{print $1, $NF}' users.txt
+
+3. -F
+Specifies a custom field separator.
+Example (colon-separated files like /etc/passwd):
+awk -F ':' '{print $1, $3}' /etc/passwd
+
+4. /pattern/
+Filters lines matching a pattern.
+Example:
+awk '/root/ {print}' /etc/passwd
+
+5. BEGIN
+Runs commands before processing input.
+Example:
+awk 'BEGIN {print "Start parsing"} {print $1}' file.txt
+
+6. END
+Runs commands after processing input.
+Example:
+awk '{sum += $1} END {print sum}' numbers.txt
+
+7. NR
+Built-in variable representing line number.
+Example:
+awk '{print NR, $0}' file.txt
+
+CTF AND CYBERSECURITY USE CASES:
+- Extracting usernames or IDs from /etc/passwd
+- Parsing log files to find suspicious activity
+- Extracting flags from large text outputs
+- Processing command output efficiently
+- Automating repetitive filtering tasks
+
+NOTES:
+- awk works well with pipes (|)
+- Combine awk with grep, sort, and uniq for powerful workflows
+- Ideal for one-liners in time-limited CTF challenges
+
