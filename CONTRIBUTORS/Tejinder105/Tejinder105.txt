@@ -1,0 +1,3 @@
+Name: Tejinderpal Singh
+College: Indian Institute of Information Technology
+Fun Fact : I started learn git commands with this event
