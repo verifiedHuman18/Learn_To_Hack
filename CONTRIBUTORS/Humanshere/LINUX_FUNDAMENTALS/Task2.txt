@@ -1,0 +1,30 @@
+mkdir
+# Creates a new directory
+
+cd
+# Changes the current working directory
+
+touch
+# Creates an empty file
+
+mv
+# Moves or renames a file or directory
+
+rm
+# Deletes files or directories
+
+proof- https://drive.google.com/file/d/1gb_m_rslfQeyQXMKuuKniPID6NygNfIH/view?usp=drive_link
+
+useradd
+# Creates a new user account on the system
+
+groups
+# Displays the groups a user belongs to
+
+usermod
+# Modifies a user account
+
+passwd
+# Sets or changes a user’s password
+
+proof- https://drive.google.com/file/d/1qU032Jk95UjrDaYk3Og6dTrXfGvruBpn/view?usp=sharing
